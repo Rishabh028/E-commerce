@@ -65,6 +65,3 @@ src/
 - **No server-side stock validation**: Stock states are generated client-side. A real app would validate against a backend before confirming the add-to-cart.
 - **Thumbnail images**: Extra thumbnails use picsum.photos placeholders since the Fake Store API only provides a single image per product.
 
-## Live URL
-
-*(Deploy to Vercel/Netlify and update here)*
