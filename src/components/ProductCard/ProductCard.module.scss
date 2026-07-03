@@ -1,0 +1,113 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background: $surface;
+  border: 1px solid $border;
+  border-radius: $radius-md;
+  overflow: hidden;
+  transition: transform $transition-base, box-shadow $transition-base;
+  height: 100%;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: $shadow-lg;
+  }
+}
+
+.imageWrap {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+  background: $surface;
+  border-bottom: 1px solid $border;
+  cursor: pointer;
+
+  img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 1.5rem;
+  }
+}
+
+.saleBadge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: $accent;
+  color: $surface;
+  padding: 3px 8px;
+  border-radius: $radius-sm;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.body {
+  padding: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.category {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: $text-muted;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: $text;
+  @include line-clamp(2);
+  margin-bottom: 0.75rem;
+  cursor: pointer;
+  transition: color $transition-fast;
+
+  &:hover {
+    color: $secondary;
+  }
+}
+
+.priceRow {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: $primary;
+}
+
+.original {
+  font-size: 0.85rem;
+  color: $text-muted;
+  text-decoration: line-through;
+}
+
+.addBtn {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: $primary;
+  color: $surface;
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: background-color $transition-fast;
+  border-top: 1px solid $border;
+
+  &:hover {
+    background-color: $primary-light;
+  }
+}

@@ -1,0 +1,223 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+// ─── Overlay ───
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background-color: rgba(0, 0, 0, 0);
+  pointer-events: none;
+  transition: background-color $transition-base;
+
+  &.open {
+    background-color: rgba(0, 0, 0, 0.45);
+    pointer-events: auto;
+  }
+}
+
+// ─── Drawer ───
+.drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 201;
+  width: 420px;
+  max-width: 100%;
+  background-color: $surface;
+  display: flex;
+  flex-direction: column;
+  box-shadow: $shadow-xl;
+  transform: translateX(100%);
+  transition: transform $transition-base;
+
+  &.open {
+    transform: translateX(0);
+  }
+
+  @include mobile {
+    width: 100%;
+  }
+}
+
+// ─── Header ───
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem;
+  border-bottom: 1px solid $border;
+  flex-shrink: 0;
+
+  h2 {
+    font-size: 1.125rem;
+    font-weight: 700;
+  }
+}
+
+.closeBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: $radius-sm;
+  color: $text-muted;
+  transition: background-color $transition-fast, color $transition-fast;
+
+  &:hover {
+    background-color: rgba($accent, 0.08);
+    color: $accent;
+  }
+}
+
+// ─── Body ───
+.body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1.25rem;
+}
+
+.empty {
+  text-align: center;
+  color: $text-muted;
+  padding: 3rem 0;
+}
+
+// ─── Item List ───
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.item {
+  display: flex;
+  gap: 0.875rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid $border;
+}
+
+.thumb {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  border: 1px solid $border;
+  border-radius: $radius-sm;
+  background-color: $surface;
+  flex-shrink: 0;
+}
+
+.details {
+  flex: 1;
+  min-width: 0;
+}
+
+.title {
+  font-size: 0.875rem;
+  font-weight: 500;
+  @include line-clamp(2);
+  margin-bottom: 2px;
+}
+
+.variant {
+  font-size: 0.75rem;
+  color: $text-muted;
+  margin-bottom: 4px;
+}
+
+.price {
+  font-weight: 600;
+  font-size: 0.875rem;
+  margin-bottom: 8px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.qtyGroup {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid $border;
+  border-radius: $radius-sm;
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    color: $text-muted;
+    transition: background-color $transition-fast;
+
+    &:hover {
+      background-color: rgba($primary, 0.04);
+      color: $primary;
+    }
+  }
+
+  span {
+    width: 28px;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+}
+
+.removeBtn {
+  color: $text-muted;
+  transition: color $transition-fast;
+
+  &:hover {
+    color: $accent;
+  }
+}
+
+// ─── Footer ───
+.footer {
+  flex-shrink: 0;
+  padding: 1.25rem;
+  border-top: 1px solid $border;
+  background-color: #f8fafc;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  color: $text-muted;
+  margin-bottom: 0.5rem;
+}
+
+.muted {
+  font-size: 0.8rem;
+}
+
+.total {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: $text;
+  padding-top: 0.75rem;
+  margin-top: 0.5rem;
+  border-top: 1px dashed $border;
+  margin-bottom: 1rem;
+}
+
+.checkoutBtn {
+  width: 100%;
+  padding: 0.875rem;
+  background-color: $primary;
+  color: $surface;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: $radius-md;
+  transition: background-color $transition-fast;
+
+  &:hover {
+    background-color: $primary-light;
+  }
+}

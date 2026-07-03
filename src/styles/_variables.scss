@@ -1,0 +1,37 @@
+@use 'sass:color';
+
+// ─── Colors ───
+$primary: #0f172a;
+$primary-light: #1e293b;
+$secondary: #3b82f6;
+$accent: #ef4444;
+$success: #10b981;
+$warning: #f59e0b;
+$bg: #f8fafc;
+$surface: #ffffff;
+$text: #1e293b;
+$text-muted: #64748b;
+$border: #e2e8f0;
+
+// ─── Typography ───
+$font-family: 'Inter', system-ui, -apple-system, sans-serif;
+
+// ─── Breakpoints ───
+$mobile: 767px;
+
+// ─── Spacing ───
+$container-max: 1200px;
+$radius-sm: 4px;
+$radius-md: 8px;
+$radius-lg: 12px;
+
+// ─── Shadows ───
+$shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+$shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+$shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+$shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+
+// ─── Transitions ───
+$transition-fast: 150ms ease;
+$transition-base: 250ms ease;
+$transition-slow: 350ms ease;
