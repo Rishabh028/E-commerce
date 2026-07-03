@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams, useSearchParams } from 'react-router-dom';
-import type { Product, Size } from '../../types';
+import type { Product } from '../../types';
 import { fetchProductById, mockAddToCartRequest } from '../../utils/api';
-import { getVariantStock } from '../../utils/mockData';
 import { useCart } from '../../context/CartContext';
 import { useVariantSelector } from '../../hooks/useVariantSelector';
 import styles from './ProductDetail.module.scss';

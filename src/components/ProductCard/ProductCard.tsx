@@ -1,7 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import type { Product } from '../../types';
 import { useCart } from '../../context/CartContext';
-import { getVariantStock } from '../../utils/mockData';
 import styles from './ProductCard.module.scss';
 
 interface ProductCardProps {
