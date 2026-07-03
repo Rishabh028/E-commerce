@@ -2,6 +2,7 @@
 
 A production-quality mini e-commerce application built as a frontend developer assignment.
 
+## Live Link
 <a href="https://e-commerce-six-rosy-74.vercel.app/">
     <img alt="Live Demo" src="https://img.shields.io/badge/Live_Demo-View_Site-28a745?style=for-the-badge&logo=vercel"/>
   </a>
